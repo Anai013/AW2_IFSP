@@ -76,6 +76,7 @@
                             distinctio neque blanditiis, dolorem aperiam nulla explicabo
                             asperiores
                         </p>
+                        <p class="price"> A partir de R$ 2,00 cada</p>
                     </div>
                     <div class="card">
                         <h3 class="title">Sorvetes de Massa</h3>
@@ -85,6 +86,7 @@
                             distinctio neque blanditiis, dolorem aperiam nulla explicabo
                             asperiores
                         </p>
+                        <p class="price"> A partir de R$ 3,50 cada</p>
                     </div>
                     <div class="card">
                         <h3 class="title">Milk Shakes</h3>
@@ -94,6 +96,7 @@
                             distinctio neque blanditiis, dolorem aperiam nulla explicabo
                             asperiores
                         </p>
+                        <p class="price"> A partir de R$ 12,00 cada</p>
                     </div>
                 </div>
             </div>
@@ -107,7 +110,38 @@
                 <header>
                     <h2 class="title">Ainda temos mais produtos, confira aqui!</h2>
                 </header>
-                <div> </div>
+              
+                <table id="data-table">
+					<thead>
+						<tr>
+							<th>Nome do Produto</th>
+							<th>Preço</th>
+							<th>Estoque</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="description">Cascão misto</td>
+							<td class="price">R$ 3,50</td>
+							<td class="quantity">100</td>
+						</tr>
+						<tr>
+							<td class="description">Milshake de uva</td>
+							<td class="price">R$ 13,00</td>
+							<td class="quantity">80</td>
+						</tr>
+						<tr>
+							<td class="description">Picolé de frutas vermelhas</td>
+							<td class="price">R$ 2,50</td>
+							<td class="quantity">200</td>
+						</tr>
+                        <tr>
+							<td class="description">Sorvete especial chuva de prata</td>
+							<td class="price">R$ 15,50</td>
+							<td class="quantity">200</td>
+						</tr>
+					</tbody>
+				</table>
             </div>
         </section>
 
@@ -123,10 +157,46 @@
                     </p>
                 </div>
 
-                <div class="links">
-                    <ul class="grid">
-
-                    </ul>
+                <div class="form">
+                    <form
+                        action="./php/cadastro.php"
+                        method="POST"
+                        class=""
+                    >
+                        <div class="info-box">
+                            <label for="idNome">Nome completo: </label>
+                            <input name="nome" id="idNome" type="text" size="50" maxlenght="30" placeholder="Informe seu nome" required/>
+                        </div>
+                        <div class="info-box">
+                            <label for="idEmail">E-mail</label>
+                            <input name="email" id="idEmail" type="email" size="20" maxlenght="20" placeholder="Informe seu e-mail pessoal" required/>
+                        </div>
+                        <div class="info-box">
+                            <label for="idEndereco">Endereço</label>
+                            <div class="end-box">
+                                <input name="endereco" id="idEndereco" type="text" size="50" maxlenght="50" placeholder="Informe o logradouro"/>
+                                <input name="numero" id="idNumero" type="text" size="10" maxlenght="10" placeholder="No" style="width:10%;" />
+                            </div>   
+                        </div>
+                        <div class="info-box">
+                            <label for="idComplemento">Complemento</label>
+                            <input name="complemento" id="idComplemento" type="text" size="20" maxlenght="20" placeholder="Se houver, nos diga o complemento"/>
+                        </div>
+                        <div class="info-box">
+                            <label for="idBairro">Bairro</label>
+                            <input name="bairro" id="idBairro" type="text" size="20" maxlenght="20" placeholder="Informe seu bairro"/>
+                        </div>
+                        <div class="info-box">
+                            <label for="idEstado">Estado</label>
+                            <input name="estado" id="idEstado" type="text" size="20" maxlenght="20" placeholder="Informe seu estado"/>
+                        </div>
+                        
+                        <div class="buttons">
+                            <button type="reset" class="submit-button" id="clear"> Limpar </button> 
+                            <button type="submit" class="submit-button" id="submit"> Enviar </button> 
+                        </div>
+                        
+                    </form>
                 </div>
             </div>
         </section>
